@@ -32,25 +32,25 @@ const SEED = {
       angles:["Educación problema","Lista de síntomas","Curiosidad + problema","Prueba social","Objeción directa","Resultado cliente","Contrarian","Rutina / día a día"],
       pains:["Inflamación crónica","Sistema nervioso","Fatiga crónica","Ansiedad alimentaria","Falta de energía","Sobrepeso","Estrés crónico","Insomnio"],
       buyReasons:["Resultado transformación","Contenido educativo","Urgencia / dolor fuerte","Prueba social / testimonio","Recomendación","Precio / oferta","Seguimiento persistente"],
-      programs:["Plan Esencial","Plan Premium 3M","Plan Transformación 6M","Membresía Mensual"],
       objections:["Precio","Ahora no es buen momento","Consultar con su pareja","Miedo a no cumplirse","Viaje / evento próximo","Desconfianza por malas experiencias","Quiere acompañamiento presencial","Comparando otros programas","Tengo que pensarlo","Pagaré en X fecha","Sin objeción"],
+      avatars:["Mujer 25-35 estresada","Mujer 35-45 con fatiga crónica","Mujer activa con inflamación","Mujer con ansiedad alimentaria"],
     },
   ],
   content:[
-    { id:"ct1", clientId:"c1", date:"2026-06-09", type:"Reel", topic:"Por qué tienes antojos por la noche", angle:"Curiosidad + problema", pain:"Ansiedad alimentaria", reach:31200, saves:890, shares:445, comments:112, followers_gained:234, leadsGenerated:22, salesLinked:9, revenue:1530, cashCollected:1530 },
-    { id:"ct2", clientId:"c1", date:"2026-06-03", type:"Carrusel", topic:"5 señales de inflamación crónica", angle:"Lista de síntomas", pain:"Inflamación crónica", reach:9200, saves:540, shares:201, comments:63, followers_gained:89, leadsGenerated:14, salesLinked:5, revenue:870, cashCollected:870 },
-    { id:"ct3", clientId:"c1", date:"2026-06-06", type:"Historia", topic:"Testimonio cliente", angle:"Prueba social", pain:"Falta de energía", reach:4100, saves:0, shares:12, comments:28, followers_gained:22, leadsGenerated:6, salesLinked:3, revenue:510, cashCollected:510 },
-    { id:"ct4", clientId:"c1", date:"2026-06-01", type:"Reel", topic:"Síntomas del sistema nervioso sobreactivado", angle:"Educación problema", pain:"Sistema nervioso", reach:18400, saves:312, shares:89, comments:47, followers_gained:145, leadsGenerated:8, salesLinked:2, revenue:340, cashCollected:340 },
-    { id:"ct5", clientId:"c1", date:"2026-05-15", type:"Carrusel", topic:"Cómo bajar la inflamación sin dieta", angle:"Contrarian", pain:"Inflamación crónica", reach:12400, saves:620, shares:180, comments:54, followers_gained:112, leadsGenerated:11, salesLinked:4, revenue:680, cashCollected:680 },
-    { id:"ct6", clientId:"c1", date:"2026-05-08", type:"Reel", topic:"La raíz del cansancio crónico", angle:"Educación problema", pain:"Fatiga crónica", reach:22100, saves:710, shares:320, comments:88, followers_gained:198, leadsGenerated:17, salesLinked:7, revenue:1190, cashCollected:1190 },
+    { id:"ct1", clientId:"c1", date:"2026-06-09", type:"Reel", topic:"Por qué tienes antojos por la noche", angle:"Curiosidad + problema", pain:"Ansiedad alimentaria", avatar:"Mujer con ansiedad alimentaria", reach:31200, saves:890, shares:445, comments:112, followers_gained:234, leadsGenerated:22, salesLinked:9, revenue:1530, cashCollected:1530 },
+    { id:"ct2", clientId:"c1", date:"2026-06-03", type:"Carrusel", topic:"5 señales de inflamación crónica", angle:"Lista de síntomas", pain:"Inflamación crónica", avatar:"Mujer activa con inflamación", reach:9200, saves:540, shares:201, comments:63, followers_gained:89, leadsGenerated:14, salesLinked:5, revenue:870, cashCollected:870 },
+    { id:"ct3", clientId:"c1", date:"2026-06-06", type:"Historia", topic:"Testimonio cliente", angle:"Prueba social", pain:"Falta de energía", avatar:"Mujer 35-45 con fatiga crónica", reach:4100, saves:0, shares:12, comments:28, followers_gained:22, leadsGenerated:6, salesLinked:3, revenue:510, cashCollected:510 },
+    { id:"ct4", clientId:"c1", date:"2026-06-01", type:"Reel", topic:"Síntomas del sistema nervioso sobreactivado", angle:"Educación problema", pain:"Sistema nervioso", avatar:"Mujer 25-35 estresada", reach:18400, saves:312, shares:89, comments:47, followers_gained:145, leadsGenerated:8, salesLinked:2, revenue:340, cashCollected:340 },
+    { id:"ct5", clientId:"c1", date:"2026-05-15", type:"Carrusel", topic:"Cómo bajar la inflamación sin dieta", angle:"Contrarian", pain:"Inflamación crónica", avatar:"Mujer activa con inflamación", reach:12400, saves:620, shares:180, comments:54, followers_gained:112, leadsGenerated:11, salesLinked:4, revenue:680, cashCollected:680 },
+    { id:"ct6", clientId:"c1", date:"2026-05-08", type:"Reel", topic:"La raíz del cansancio crónico", angle:"Educación problema", pain:"Fatiga crónica", avatar:"Mujer 35-45 con fatiga crónica", reach:22100, saves:710, shares:320, comments:88, followers_gained:198, leadsGenerated:17, salesLinked:7, revenue:1190, cashCollected:1190 },
   ],
   leads:[
-    { id:"l1", clientId:"c1", name:"Ana López", source:"Reel Jun 9", stage:"conversación", firstContactDate:"2026-06-09", scheduledDate:"", date:"2026-06-09", showedUp:null, notes:"Interesada en plan 3 meses", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"" },
-    { id:"l2", clientId:"c1", name:"María García", source:"Carrusel Jun 3", stage:"cerrado", firstContactDate:"2026-06-04", scheduledDate:"2026-06-06", date:"2026-06-04", showedUp:true, notes:"Plan básico", saleAmount:97, cashCollected:97, isUpsell:false, isResell:false, paymentType:"Upfront", buyReason:"Resultado transformación", program:"Plan Esencial", callLink:"", objection:"Sin objeción" },
+    { id:"l1", clientId:"c1", name:"Ana López", source:"Reel Jun 9", stage:"conversación", firstContactDate:"2026-06-09", scheduledDate:"", date:"2026-06-09", showedUp:null, notes:"Interesada en plan 3 meses", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"", avatar:"" },
+    { id:"l2", clientId:"c1", name:"María García", source:"Carrusel Jun 3", stage:"cerrado", firstContactDate:"2026-06-04", scheduledDate:"2026-06-06", date:"2026-06-04", showedUp:true, notes:"Plan básico", saleAmount:97, cashCollected:97, isUpsell:false, isResell:false, paymentType:"Upfront", buyReason:"Resultado transformación", program:"Plan Esencial", callLink:"", objection:"Sin objeción", avatar:"Mujer 25-35 estresada" },
     { id:"l3", clientId:"c1", name:"Sofia Ruiz", source:"Reel Jun 9", stage:"no-show", firstContactDate:"2026-06-10", scheduledDate:"2026-06-11", date:"2026-06-10", showedUp:false, notes:"", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"Ahora no es buen momento" },
-    { id:"l4", clientId:"c1", name:"Carla Vega", source:"Historia Jun 6", stage:"cerrado", firstContactDate:"2026-06-07", scheduledDate:"2026-06-09", date:"2026-06-07", showedUp:true, notes:"Plan premium", saleAmount:197, cashCollected:197, isUpsell:false, isResell:false, paymentType:"2 cuotas", buyReason:"Contenido educativo", program:"Plan Premium 3M", callLink:"", objection:"Sin objeción" },
+    { id:"l4", clientId:"c1", name:"Carla Vega", source:"Historia Jun 6", stage:"cerrado", firstContactDate:"2026-06-07", scheduledDate:"2026-06-09", date:"2026-06-07", showedUp:true, notes:"Plan premium", saleAmount:197, cashCollected:197, isUpsell:false, isResell:false, paymentType:"2 cuotas", buyReason:"Contenido educativo", program:"Plan Premium 3M", callLink:"", objection:"Sin objeción", avatar:"Mujer activa con inflamación" },
     { id:"l5", clientId:"c1", name:"Luisa Mora", source:"Carrusel Jun 3", stage:"llamada agendada", firstContactDate:"2026-06-11", scheduledDate:"2026-06-13", date:"2026-06-11", showedUp:true, notes:"Call mañana", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"Plan Esencial", callLink:"https://cal.com/dani/consulta", objection:"" },
-    { id:"l6", clientId:"c1", name:"Patricia Díaz", source:"Reel Jun 1", stage:"cerrado", firstContactDate:"2026-06-03", scheduledDate:"2026-06-05", date:"2026-06-03", showedUp:true, notes:"Upsell 6 meses", saleAmount:347, cashCollected:347, isUpsell:true, isResell:false, paymentType:"3 cuotas", buyReason:"Urgencia / dolor fuerte", program:"Plan Transformación 6M", callLink:"", objection:"Sin objeción" },
+    { id:"l6", clientId:"c1", name:"Patricia Díaz", source:"Reel Jun 1", stage:"cerrado", firstContactDate:"2026-06-03", scheduledDate:"2026-06-05", date:"2026-06-03", showedUp:true, notes:"Upsell 6 meses", saleAmount:347, cashCollected:347, isUpsell:true, isResell:false, paymentType:"3 cuotas", buyReason:"Urgencia / dolor fuerte", program:"Plan Transformación 6M", callLink:"", objection:"Sin objeción", avatar:"Mujer 35-45 con fatiga crónica" },
     { id:"l7", clientId:"c1", name:"Fernanda Ríos", source:"Reel Jun 9", stage:"nuevo lead", firstContactDate:"2026-06-10", scheduledDate:"", date:"2026-06-10", showedUp:null, notes:"", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"" },
     { id:"l8", clientId:"c1", name:"Valentina Cruz", source:"Carrusel Jun 3", stage:"no-show", firstContactDate:"2026-06-05", scheduledDate:"2026-06-07", date:"2026-06-05", showedUp:false, notes:"", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"Precio" },
   ],
@@ -911,63 +911,6 @@ function ReachByMonthChart({ content }) {
   );
 }
 
-function ContentROIChart({ content }) {
-  const validContent = content.filter(c=>toNum(c.reach)>0&&toNum(c.revenue)>=0);
-  const COLORS = {"Reel":"#FF3B5C","Carrusel":"#4D9FFF","Historia":"#FFB800","Post":"#9B6DFF","YouTube":"#00E5A0","Live":"#FF6680"};
-
-  const ref = useChartJS((Chart, canvas) => new Chart(canvas, {
-    type:"scatter",
-    data:{
-      datasets: Object.entries(COLORS).map(([type,color]) => ({
-        label:type,
-        data: validContent.filter(c=>c.type===type).map(c=>({ x:toNum(c.reach), y:toNum(c.revenue), label:c.topic })),
-        backgroundColor:color+"99", borderColor:color, pointRadius:6, pointHoverRadius:9,
-      })).filter(d=>d.data.length>0)
-    },
-    options:{
-      responsive:true, maintainAspectRatio:false,
-      plugins:{
-        legend:{display:false},
-        tooltip:{ backgroundColor:"#13131C", titleColor:"#EEEEF5", bodyColor:"#5A5A78", borderColor:"#1A1A28", borderWidth:1,padding:10,
-          callbacks:{ label: ctx => [`  ${ctx.raw.label||""}`,`  Reach: ${Math.round(ctx.raw.x).toLocaleString("es")}`,`  Revenue: $${Math.round(ctx.raw.y).toLocaleString("es")}`] }
-        }
-      },
-      scales:{
-        x:{ grid:{color:"#1A1A28"}, ticks:{color:"#5A5A78",font:{size:10},callback:v=>v>=1000?Math.round(v/1000)+"K":v}, title:{display:true,text:"Reach",color:"#5A5A78",font:{size:10}} },
-        y:{ grid:{color:"#1A1A28"}, ticks:{color:"#5A5A78",font:{size:10},callback:v=>"$"+v.toLocaleString("es")}, beginAtZero:true, title:{display:true,text:"Revenue",color:"#5A5A78",font:{size:10}} }
-      }
-    }
-  }), [validContent.length]);
-
-  if (validContent.length < 3) return (
-    <div style={{ background:"#13131C",border:"1px solid #1A1A28",borderRadius:12,padding:"18px 20px" }}>
-      <div style={{ fontWeight:600,fontSize:13,marginBottom:14 }}>ROI por pieza — Reach vs Revenue</div>
-      <EmptyChart icon="🎯" title="Registra al menos 3 piezas" hint="Con reach y revenue completados para ver cuál tipo de contenido tiene mejor retorno"/>
-    </div>
-  );
-  const typeColors = [...new Set(validContent.map(c=>c.type))];
-  return (
-    <div style={{ background:"#13131C",border:"1px solid #1A1A28",borderRadius:12,padding:"18px 20px" }}>
-      <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:14 }}>
-        <div>
-          <div style={{ fontWeight:600,fontSize:13 }}>ROI por pieza — Reach vs Revenue</div>
-          <div style={{ fontSize:11,color:"#5A5A78",marginTop:2 }}>Arriba a la derecha = mejor rendimiento</div>
-        </div>
-        <div style={{ display:"flex",gap:10,flexWrap:"wrap" }}>
-          {typeColors.map(t=>(
-            <div key={t} style={{ display:"flex",alignItems:"center",gap:5,fontSize:10,color:"#5A5A78" }}>
-              <div style={{ width:8,height:8,borderRadius:"50%",background:COLORS[t]||"#888" }}/>
-              {t}
-            </div>
-          ))}
-        </div>
-      </div>
-      <div style={{ position:"relative",height:220 }}>
-        <canvas ref={ref} role="img" aria-label="Scatter plot de reach vs revenue por pieza de contenido"/>
-      </div>
-    </div>
-  );
-}
 
 function RevenueMiniLine({ billing }) {
   const sorted = [...billing].sort((a,b)=>a.month.localeCompare(b.month));
@@ -1023,17 +966,20 @@ function RevenueMiniLine({ billing }) {
 function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUpdateClient }) {
   const angles = (client && client.angles) || [];
   const pains = (client && client.pains) || [];
+  const avatars = (client && client.avatars) || [];
   const updateAngles = list => onUpdateClient({...client, angles:list});
   const updatePains = list => onUpdateClient({...client, pains:list});
+  const updateAvatars = list => onUpdateClient({...client, avatars:list});
   const [showForm, setShowForm] = useState(false);
   const [editItem, setEditItem] = useState(null);
   const [showAngles, setShowAngles] = useState(false);
   const [showPains, setShowPains] = useState(false);
+  const [showAvatars, setShowAvatars] = useState(false);
   const [viewMode, setViewMode] = useState("general"); 
   const [filterMonth, setFilterMonth] = useState(thisMonth());
   const [sortBy, setSortBy] = useState("revenue");
   const [filterType, setFilterType] = useState("all");
-  const emptyForm = { type:"Reel", topic:"", angle:angles[0]||"", pain:pains[0]||"", date:new Date().toISOString().split("T")[0], reach:"", saves:"", shares:"", comments:"", followers_gained:"", leadsGenerated:"", salesLinked:"", revenue:"", cashCollected:"" };
+  const emptyForm = { type:"Reel", topic:"", angle:"", pain:"", avatar:"", date:new Date().toISOString().split("T")[0], reach:"", saves:"", shares:"", comments:"", followers_gained:"", leadsGenerated:"", salesLinked:"", revenue:"", cashCollected:"" };
   const [form, setForm] = useState(emptyForm);
 
   const displayed = viewMode==="month" ? content.filter(c=>getMonth(c.date)===filterMonth) : content;
@@ -1055,6 +1001,8 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
   displayed.forEach(c=>{ byAngle[c.angle]=(byAngle[c.angle]||0)+c.revenue; });
   const byPain = {};
   displayed.forEach(c=>{ byPain[c.pain]=(byPain[c.pain]||0)+c.revenue; });
+  const byAvatar = {};
+  displayed.forEach(c=>{ if(c.avatar) byAvatar[c.avatar]=(byAvatar[c.avatar]||0)+toNum(c.revenue); });
 
   const allMonths = [...new Set(content.map(c=>getMonth(c.date)))].sort().reverse();
 
@@ -1077,6 +1025,7 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
         <div style={{ display:"flex",gap:8 }}>
           <Btn variant="ghost" size="sm" onClick={()=>setShowAngles(true)}>✎ Ángulos</Btn>
           <Btn variant="ghost" size="sm" onClick={()=>setShowPains(true)}>✎ Dolores</Btn>
+          <Btn variant="ghost" size="sm" onClick={()=>setShowAvatars(true)}>✎ Avatares</Btn>
           <Btn onClick={()=>{ setEditItem(null); setForm(emptyForm); setShowForm(true); }}>+ Contenido</Btn>
         </div>
       </div>
@@ -1114,7 +1063,7 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
       </div>
 
       {/* ANGLE + PAIN */}
-      <div style={{ display:"grid",gridTemplateColumns:"1fr 1fr",gap:16 }}>
+      <div style={{ display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(200px,1fr))",gap:16 }}>
         <div style={{ background:T.card,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 18px" }}>
           <div style={{ fontWeight:600,marginBottom:12,fontSize:13 }}>Revenue por ángulo</div>
           {Object.entries(byAngle).sort((a,b)=>b[1]-a[1]).map(([angle,rev])=>(
@@ -1137,10 +1086,20 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
           ))}
           {Object.keys(byPain).length===0&&<div style={{ color:T.muted,fontSize:12 }}>Sin datos</div>}
         </div>
+        <div style={{ background:T.card,border:`1px solid ${T.border}`,borderRadius:12,padding:"16px 18px" }}>
+          <div style={{ fontWeight:600,marginBottom:12,fontSize:13 }}>Revenue por avatar</div>
+          {Object.entries(byAvatar).sort((a,b)=>b[1]-a[1]).map(([avatar,rev])=>(
+            <div key={avatar} style={{ display:"flex",alignItems:"center",gap:10,marginBottom:8 }}>
+              <div style={{ width:130,fontSize:11,color:T.text,whiteSpace:"nowrap",overflow:"hidden",textOverflow:"ellipsis" }}>{avatar}</div>
+              <div style={{ flex:1 }}><ProgressBar value={rev} max={Math.max(...Object.values(byAvatar),1)} color={"#00B4D8"}/></div>
+              <div className="mono" style={{ fontSize:11,color:T.green,width:55,textAlign:"right" }}>{fmt$(rev)}</div>
+            </div>
+          ))}
+          {Object.keys(byAvatar).length===0&&<div style={{ color:T.muted,fontSize:12 }}>Sin datos — asigna avatares al contenido para ver esta métrica</div>}
+        </div>
       </div>
 
       <ReachByMonthChart content={displayed}/>
-      <ContentROIChart content={displayed}/>
 
             {/* MONTHLY SUMMARIES (only in general view) */}
       {viewMode==="general"&&allMonths.length>0&&(
@@ -1194,7 +1153,7 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
               <div style={{ display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:8 }}>
                 <div style={{ flex:1 }}>
                   <div style={{ fontWeight:600,marginBottom:5 }}>{c.topic}</div>
-                  <div style={{ display:"flex",gap:6,flexWrap:"wrap" }}><Tag color={T.blue}>{c.type}</Tag><Tag color={T.purple}>{c.angle}</Tag><Tag color={T.red}>{c.pain}</Tag><Tag color={T.muted}>{c.date}</Tag></div>
+                  <div style={{ display:"flex",gap:6,flexWrap:"wrap" }}><Tag color={T.blue}>{c.type}</Tag><Tag color={T.purple}>{c.angle}</Tag><Tag color={T.red}>{c.pain}</Tag>{c.avatar&&<Tag color={"#00B4D8"}>{c.avatar}</Tag>}<Tag color={T.muted}>{c.date}</Tag></div>
                 </div>
                 <div style={{ display:"flex",gap:16, marginLeft:12 }}>
                   <Chip label="Reach" value={fmtN(c.reach)} color={T.blue}/>
@@ -1221,6 +1180,7 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
 
       {showAngles&&<ListEditor title="Ángulos de comunicación" items={angles} onChange={updateAngles} onClose={()=>setShowAngles(false)}/>}
       {showPains&&<ListEditor title="Dolores del cliente" items={pains} onChange={updatePains} onClose={()=>setShowPains(false)}/>}
+      {showAvatars&&<ListEditor title="Avatares" items={avatars} onChange={updateAvatars} onClose={()=>setShowAvatars(false)}/>}
 
       {showForm&&(
         <Modal title={editItem?"Editar contenido":"Registrar contenido"} onClose={()=>setShowForm(false)} width={620}>
@@ -1228,6 +1188,7 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
             <Row><Field label="Tipo"><select value={form.type} onChange={e=>setForm(p=>({...p,type:e.target.value}))}>{CONTENT_TYPES.map(t=><option key={t}>{t}</option>)}</select></Field><Field label="Fecha"><input type="date" value={form.date} onChange={e=>setForm(p=>({...p,date:e.target.value}))}/></Field></Row>
             <Field label="Tema / Título"><input value={form.topic} onChange={e=>setForm(p=>({...p,topic:e.target.value}))} placeholder="Ej:5 señales de inflamación crónica"/></Field>
             <Row><Field label="Ángulo de comunicación"><select value={form.angle} onChange={e=>setForm(p=>({...p,angle:e.target.value}))}>{angles.map(a=><option key={a}>{a}</option>)}</select></Field><Field label="Dolor que aborda"><select value={form.pain} onChange={e=>setForm(p=>({...p,pain:e.target.value}))}>{pains.map(p=><option key={p}>{p}</option>)}</select></Field></Row>
+            <Field label="Avatar objetivo"><select value={form.avatar||""} onChange={e=>setForm(p=>({...p,avatar:e.target.value}))}><option value="">— Sin avatar —</option>{avatars.map(a=><option key={a}>{a}</option>)}</select></Field>
             <Divider label="Alcance"/>
             <Row cols={3}><Field label="Reach"><input type="number" value={form.reach} onChange={e=>setForm(p=>({...p,reach:e.target.value}))}/></Field><Field label="Saves"><input type="number" value={form.saves} onChange={e=>setForm(p=>({...p,saves:e.target.value}))}/></Field><Field label="Shares"><input type="number" value={form.shares} onChange={e=>setForm(p=>({...p,shares:e.target.value}))}/></Field></Row>
             <Row cols={3}><Field label="Comentarios"><input type="number" value={form.comments} onChange={e=>setForm(p=>({...p,comments:e.target.value}))}/></Field><Field label="Seguidores ganados"><input type="number" value={form.followers_gained} onChange={e=>setForm(p=>({...p,followers_gained:e.target.value}))}/></Field><Field label="Leads generados"><input type="number" value={form.leadsGenerated} onChange={e=>setForm(p=>({...p,leadsGenerated:e.target.value}))}/></Field></Row>
@@ -1534,23 +1495,102 @@ function ObjectionsChart({ leads }) {
   );
 }
 
-function SalesDash({ clientId, client, leads, dailyChats, cContent, onAddLead, onUpdateLead, onDeleteLead, onAddChat, onUpdateChat, onDeleteChat, onUpdateClient }) {
+
+function AttractionRow({label, val, maxRev, color}) {
+  return (
+    <div style={{marginBottom:10}}>
+      <div style={{display:"flex",justifyContent:"space-between",marginBottom:4}}>
+        <span style={{fontSize:11,color:"#EEEEF5",flex:1,paddingRight:8,overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{label}</span>
+        <div style={{display:"flex",gap:10,flexShrink:0}}>
+          <span style={{fontSize:11,color:"#5A5A78"}}>{val.leads} lead{val.leads!==1?"s":""}</span>
+          <span style={{fontSize:11,fontFamily:"DM Mono,monospace",color:"#00E5A0",fontWeight:600}}>{fmt$(val.revenue)}</span>
+        </div>
+      </div>
+      <div style={{height:4,background:"#1A1A28",borderRadius:2,overflow:"hidden"}}>
+        <div style={{width:maxRev>0?`${Math.round(val.revenue/maxRev*100)}%`:"0%",height:"100%",background:color,borderRadius:2}}/>
+      </div>
+    </div>
+  );
+}
+
+function AttractionSection({title, data, color}) {
+  const entries = Object.entries(data).sort((a,b)=>b[1].revenue-a[1].revenue);
+  if (!entries.length) return null;
+  const maxRev = Math.max(...entries.map(([,v])=>v.revenue), 1);
+  return (
+    <div style={{background:"#13131C",border:"1px solid #1A1A28",borderRadius:12,padding:"14px 18px",flex:1,minWidth:180}}>
+      <div style={{fontWeight:600,fontSize:12,marginBottom:12,color}}>{title}</div>
+      {entries.map(([key,val])=>(
+        <AttractionRow key={key} label={key} val={val} maxRev={maxRev} color={color}/>
+      ))}
+    </div>
+  );
+}
+
+function AngleLeadChart({ leads }) {
+  const closed = leads.filter(l=>l.stage==="cerrado");
+  if (closed.length===0) return null;
+
+  const byAngle = {}, byPain = {}, byAvatar = {};
+  closed.forEach(l=>{
+    if (l.angleAttracted) {
+      if (!byAngle[l.angleAttracted]) byAngle[l.angleAttracted]={leads:0,revenue:0};
+      byAngle[l.angleAttracted].leads++;
+      byAngle[l.angleAttracted].revenue+=toNum(l.saleAmount);
+    }
+    if (l.painAttracted) {
+      if (!byPain[l.painAttracted]) byPain[l.painAttracted]={leads:0,revenue:0};
+      byPain[l.painAttracted].leads++;
+      byPain[l.painAttracted].revenue+=toNum(l.saleAmount);
+    }
+    if (l.avatar) {
+      if (!byAvatar[l.avatar]) byAvatar[l.avatar]={leads:0,revenue:0};
+      byAvatar[l.avatar].leads++;
+      byAvatar[l.avatar].revenue+=toNum(l.saleAmount);
+    }
+  });
+
+  const hasData = Object.keys(byAngle).length>0||Object.keys(byPain).length>0||Object.keys(byAvatar).length>0;
+  if (!hasData) return (
+    <div style={{background:"#13131C",border:"1px solid #1A1A28",borderRadius:12,padding:"16px 20px"}}>
+      <div style={{fontWeight:600,fontSize:13,marginBottom:6}}>Qué atrae a los compradores</div>
+      <div style={{fontSize:12,color:"#5A5A78"}}>Registra el ángulo, dolor y avatar en los leads cerrados para activar esta métrica.</div>
+    </div>
+  );
+
+  return (
+    <div style={{background:"#13131C",border:"1px solid #1A1A28",borderRadius:12,padding:"16px 18px"}}>
+      <div style={{fontWeight:600,fontSize:13,marginBottom:14}}>Qué atrae a los compradores</div>
+      <div style={{display:"flex",gap:12,flexWrap:"wrap"}}>
+        <AttractionSection title="Por ángulo" data={byAngle} color="#9B6DFF"/>
+        <AttractionSection title="Por dolor" data={byPain} color="#FF3B5C"/>
+        <AttractionSection title="Por avatar" data={byAvatar} color="#00B4D8"/>
+      </div>
+    </div>
+  );
+}
+
+
+function SalesDash({ clientId, client, leads, dailyChats, cContent, cProducts, onAddLead, onUpdateLead, onDeleteLead, onAddChat, onUpdateChat, onDeleteChat, onUpdateClient }) {
   const buyReasons = (client && client.buyReasons) || [];
-  const programs = (client && client.programs) || [];
+  const programs = (cProducts || []).filter(p=>p.active).map(p=>p.name);
   const objections = (client && client.objections) || [];
+  const avatars = (client && client.avatars) || [];
+  const angles = (client && client.angles) || [];
+  const pains = (client && client.pains) || [];
   const updateBuyReasons = list => onUpdateClient({...client, buyReasons:list});
-  const updatePrograms = list => onUpdateClient({...client, programs:list});
   const updateObjections = list => onUpdateClient({...client, objections:list});
+  const updateAvatars = list => onUpdateClient({...client, avatars:list});
   const [viewMode, setViewMode] = useState("general");
   const [filterMonth, setFilterMonth] = useState(thisMonth());
   const [showLeadForm, setShowLeadForm] = useState(false);
   const [showChatForm, setShowChatForm] = useState(false);
   const [showBuyReasons, setShowBuyReasons] = useState(false);
   const [showObjections, setShowObjections] = useState(false);
-  const [showPrograms, setShowPrograms] = useState(false);
+  const [showAvatarsMgr, setShowAvatarsMgr] = useState(false);
   const [editLead, setEditLead] = useState(null);
   const [dragOver, setDragOver] = useState(null);
-  const emptyLead = { name:"", source:"", stage:"nuevo lead", date:new Date().toISOString().split("T")[0], showedUp:null, notes:"", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, buyReason:"" };
+  const emptyLead = { name:"", source:"", stage:"nuevo lead", firstContactDate:new Date().toISOString().split("T")[0], scheduledDate:"", date:new Date().toISOString().split("T")[0], showedUp:null, notes:"", saleAmount:"", cashCollected:"", isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"", avatar:"", angleAttracted:"", painAttracted:"" };
   const [leadForm, setLeadForm] = useState(emptyLead);
   const [chatForm, setChatForm] = useState({ date:new Date().toISOString().split("T")[0], uniqueChats:0, conversations:0, scheduled:0 });
 
@@ -1572,7 +1612,7 @@ function SalesDash({ clientId, client, leads, dailyChats, cContent, onAddLead, o
   const closingRate = pct(closed.length, showedUp.length);
   const noShowRate = pct(noShow.length, showedUp.length+noShow.length);
 
-  const openEdit = (lead) => { setEditLead(lead); setLeadForm({...lead, saleAmount:String(lead.saleAmount||""), cashCollected:String(lead.cashCollected||""), firstContactDate:lead.firstContactDate||"", scheduledDate:lead.scheduledDate||"", callLink:lead.callLink||"", program:lead.program||"", paymentType:lead.paymentType||"", buyReason:lead.buyReason||"", objection:lead.objection||""}); setShowLeadForm(true); };
+  const openEdit = (lead) => { setEditLead(lead); setLeadForm({...lead, saleAmount:String(lead.saleAmount||""), cashCollected:String(lead.cashCollected||""), firstContactDate:lead.firstContactDate||"", scheduledDate:lead.scheduledDate||"", callLink:lead.callLink||"", program:lead.program||"", paymentType:lead.paymentType||"", buyReason:lead.buyReason||"", objection:lead.objection||"", avatar:lead.avatar||"", angleAttracted:lead.angleAttracted||"", painAttracted:lead.painAttracted||""}); setShowLeadForm(true); };
   const saveLead = () => {
     const daysInFunnel = (leadForm.firstContactDate && leadForm.scheduledDate)
       ? Math.max(0, Math.round((new Date(leadForm.scheduledDate)-new Date(leadForm.firstContactDate))/(1000*60*60*24)))
@@ -1606,7 +1646,7 @@ function SalesDash({ clientId, client, leads, dailyChats, cContent, onAddLead, o
         <div style={{ display:"flex",gap:8 }}>
           <Btn variant="ghost" size="sm" onClick={()=>setShowBuyReasons(true)}>✎ Razones</Btn>
           <Btn variant="ghost" size="sm" onClick={()=>setShowObjections(true)}>✎ Objeciones</Btn>
-          <Btn variant="ghost" size="sm" onClick={()=>setShowPrograms(true)}>✎ Programas</Btn>
+          <Btn variant="ghost" size="sm" onClick={()=>setShowAvatarsMgr(true)}>✎ Avatares</Btn>
           <Btn variant="subtle" size="sm" onClick={()=>setShowChatForm(true)}>+ Chats del día</Btn>
           <Btn onClick={()=>{ setEditLead(null); setLeadForm(emptyLead); setShowLeadForm(true); }}>+ Nuevo lead</Btn>
         </div>
@@ -1650,6 +1690,7 @@ function SalesDash({ clientId, client, leads, dailyChats, cContent, onAddLead, o
         <DaysInFunnelChart leads={displayedLeads}/>
         <ObjectionsChart leads={displayedLeads}/>
       </div>
+      <AngleLeadChart leads={displayedLeads}/>
 
       {/* DAILY CHATS LOG */}
       {dailyChats.length>0&&(
@@ -1690,6 +1731,8 @@ function SalesDash({ clientId, client, leads, dailyChats, cContent, onAddLead, o
                         {lead.showedUp===false&&<Tag color={T.amber}>No show</Tag>}
                         {lead.isUpsell&&<Tag color={T.purple}>🔼</Tag>}
                         {lead.isResell&&<Tag color={T.blue}>♻</Tag>}
+                        {lead.avatar&&<Tag color={"#00B4D8"}>{lead.avatar.split(" ")[0]}</Tag>}
+                        {lead.angleAttracted&&<Tag color={T.purple}>{lead.angleAttracted.split(" ")[0]}...</Tag>}
                       </div>
                     </div>
                   ))}
@@ -1702,7 +1745,7 @@ function SalesDash({ clientId, client, leads, dailyChats, cContent, onAddLead, o
       </div>
 
       {showObjections&&<ListEditor title="Objeciones / motivos de no cierre" items={objections} onChange={updateObjections} onClose={()=>setShowObjections(false)}/>}
-      {showPrograms&&<ListEditor title="Programas ofrecidos" items={programs} onChange={updatePrograms} onClose={()=>setShowPrograms(false)}/>}
+      {showAvatarsMgr&&<ListEditor title="Avatares" items={avatars} onChange={updateAvatars} onClose={()=>setShowAvatarsMgr(false)}/>}
       {showBuyReasons&&<ListEditor title="Razones de compra" items={buyReasons} onChange={updateBuyReasons} onClose={()=>setShowBuyReasons(false)}/>}
 
       {showChatForm&&(
@@ -1764,6 +1807,11 @@ function SalesDash({ clientId, client, leads, dailyChats, cContent, onAddLead, o
             </Field>
             <Field label="Razón de compra"><select value={leadForm.buyReason} onChange={e=>setLeadForm(p=>({...p,buyReason:e.target.value}))}><option value="">— Seleccionar —</option>{buyReasons.map(r=><option key={r}>{r}</option>)}</select></Field>
             <Field label="Objeción / motivo de no cierre"><select value={leadForm.objection} onChange={e=>setLeadForm(p=>({...p,objection:e.target.value}))}><option value="">— Seleccionar —</option>{objections.map(o=><option key={o}>{o}</option>)}</select></Field>
+            <Field label="Avatar del lead"><select value={leadForm.avatar} onChange={e=>setLeadForm(p=>({...p,avatar:e.target.value}))}><option value="">— Seleccionar avatar —</option>{avatars.map(a=><option key={a}>{a}</option>)}</select></Field>
+            <Row cols={2}>
+              <Field label="Ángulo que lo atrajo"><select value={leadForm.angleAttracted||""} onChange={e=>setLeadForm(p=>({...p,angleAttracted:e.target.value}))}><option value="">— Seleccionar —</option>{angles.map(a=><option key={a}>{a}</option>)}</select></Field>
+              <Field label="Dolor que resonó"><select value={leadForm.painAttracted||""} onChange={e=>setLeadForm(p=>({...p,painAttracted:e.target.value}))}><option value="">— Seleccionar —</option>{pains.map(p=><option key={p}>{p}</option>)}</select></Field>
+            </Row>
             <Field label="Link de llamada"><input value={leadForm.callLink} onChange={e=>setLeadForm(p=>({...p,callLink:e.target.value}))} placeholder="https://..."/></Field>
             <div style={{display:"flex",gap:8}}>
               {[["isUpsell","🔼 Upsell",T.purple],["isResell","♻ Resell",T.blue]].map(([k,l,c])=>(
@@ -2184,7 +2232,7 @@ export default function Eclypse() {
           />
         )}
         {view==="sales" && client&&(
-          <SalesDash clientId={selectedClient} client={client} leads={cLeads} dailyChats={cChats} cContent={cContent}
+          <SalesDash clientId={selectedClient} client={client} leads={cLeads} dailyChats={cChats} cContent={cContent} cProducts={cProducts}
             onAddLead={item=>upLeads([...leads,item])}
             onUpdateLead={item=>upLeads(leads.map(l=>l.id===item.id?item:l))}
             onDeleteLead={id=>upLeads(leads.filter(l=>l.id!==id))}
