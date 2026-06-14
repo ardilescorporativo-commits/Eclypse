@@ -1,18 +1,8 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
-import * as Lucide from "lucide-react";
 
 const S = {
-  get: async (k) => { 
-    try { 
-      const r = localStorage.getItem(k); 
-      return r ? JSON.parse(r) : null; 
-    } catch { return null; } 
-  },
-  set: async (k, v) => { 
-    try { 
-      localStorage.setItem(k, JSON.stringify(v)); 
-    } catch {} 
-  },
+  get: async (k) => { try { const r = await window.storage.get(k); return r ? JSON.parse(r.value) : null; } catch { return null; } },
+  set: async (k, v) => { try { await window.storage.set(k, JSON.stringify(v)); } catch {} },
 };
 
 const T = {
@@ -35,8 +25,6 @@ const months = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov
 const monthLabel = (ym) => { if (!ym) return ""; const [y,m] = ym.split("-"); return `${months[+m-1]} ${y}`; };
 const thisMonth = () => new Date().toISOString().slice(0,7);
 const getMonth = (d) => (d||"").slice(0,7);
-
-export default function App() {
 
 const SEED = {
   clients:[
@@ -94,7 +82,7 @@ const LEAD_STAGES = [
   { id:"no-show",           label:"No Show",            color:"#666680" },
   { id:"perdido",           label:"Perdido",            color:"#CC4444" },
 ];
-const CONTENT_TYPES = ["Reel","Carrusel","Historia","Post","YouTube","Live"];
+const CONTENT_TYPES = ["Reel","Carrusel","Historia","Post","YouTube","Live","CTA BIO"];
 
 const NAV = [
   { id:"overview", icon:"◉", label:"Overview" },
@@ -2078,7 +2066,7 @@ function EditClientModal({ client, onSave, onDelete, onClose }) {
   );
 }
 
-
+export default function Eclypse() {
   const [view, setView] = useState("overview");
   const [clients, setClients] = useState(SEED.clients);
   const [selectedClient, setSelectedClient] = useState("c1");
@@ -2225,4 +2213,3 @@ function EditClientModal({ client, onSave, onDelete, onClose }) {
     </div>
   );
 }
-
