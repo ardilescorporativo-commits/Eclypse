@@ -2225,4 +2225,4 @@ function EditClientModal({ client, onSave, onDelete, onClose }) {
     </div>
   );
 }
-}
+
