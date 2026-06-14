@@ -1,8 +1,18 @@
 import { useState, useEffect, useCallback, useRef } from "react";
+import * as Lucide from "lucide-react";
 
 const S = {
-  get: async (k) => { try { const r = await window.storage.get(k); return r ? JSON.parse(r.value) : null; } catch { return null; } },
-  set: async (k, v) => { try { await window.storage.set(k, JSON.stringify(v)); } catch {} },
+  get: async (k) => { 
+    try { 
+      const r = localStorage.getItem(k); 
+      return r ? JSON.parse(r) : null; 
+    } catch { return null; } 
+  },
+  set: async (k, v) => { 
+    try { 
+      localStorage.setItem(k, JSON.stringify(v)); 
+    } catch {} 
+  },
 };
 
 const T = {
@@ -25,6 +35,8 @@ const months = ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov
 const monthLabel = (ym) => { if (!ym) return ""; const [y,m] = ym.split("-"); return `${months[+m-1]} ${y}`; };
 const thisMonth = () => new Date().toISOString().slice(0,7);
 const getMonth = (d) => (d||"").slice(0,7);
+
+export default function App() {
 
 const SEED = {
   clients:[
@@ -2212,4 +2224,5 @@ export default function Eclypse() {
       </div>
     </div>
   );
+}
 }
