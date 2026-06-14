@@ -2078,7 +2078,7 @@ function EditClientModal({ client, onSave, onDelete, onClose }) {
   );
 }
 
-export default function Eclypse() {
+
   const [view, setView] = useState("overview");
   const [clients, setClients] = useState(SEED.clients);
   const [selectedClient, setSelectedClient] = useState("c1");
