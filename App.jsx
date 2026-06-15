@@ -963,6 +963,58 @@ function RevenueMiniLine({ billing }) {
   );
 }
 
+function ContentROIChart({ content }) {
+  const validContent = content.filter(c => toNum(c.reach) > 0 && toNum(c.revenue) > 0);
+  const TYPE_COLORS = { "Reel":"#FF3B5C", "Carrusel":"#4D9FFF", "Historia":"#FFB800", "Post":"#9B6DFF", "YouTube":"#00E5A0", "Live":"#FF6680", "CTA BIO":"#5BCEFF" };
+  const types = [...new Set(validContent.map(c=>c.type))];
+
+  const ref = useChartJS((Chart, canvas) => {
+    if (validContent.length < 3) return null;
+    return new Chart(canvas, {
+      type: "scatter",
+      data: {
+        datasets: types.map(type => ({
+          label: type,
+          data: validContent.filter(c=>c.type===type).map(c=>({ x:toNum(c.reach), y:toNum(c.revenue), topic:c.topic })),
+          backgroundColor: (TYPE_COLORS[type]||"#888") + "CC",
+          pointRadius: 7,
+          pointHoverRadius: 9,
+        }))
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display:true, position:"top", align:"end", labels:{ color:"#EEEEF5", boxWidth:10, font:{size:11} } },
+          tooltip: { backgroundColor:"#13131C", titleColor:"#EEEEF5", bodyColor:"#5A5A78", borderColor:"#1A1A28", borderWidth:1, padding:10,
+            callbacks: { label: ctx => [`  ${ctx.raw.topic?.slice(0,30)||""}`, `  Reach: ${ctx.raw.x?.toLocaleString("es")}  Revenue: ${fmt$(ctx.raw.y)}`] }
+          }
+        },
+        scales: {
+          x: { grid:{color:"#1A1A28"}, ticks:{color:"#5A5A78",font:{size:10},callback:v=>v>=1000?Math.round(v/1000)+"K":v}, title:{display:true,text:"Reach",color:"#5A5A78",font:{size:11}} },
+          y: { grid:{color:"#1A1A28"}, ticks:{color:"#5A5A78",font:{size:10},callback:v=>"$"+v.toLocaleString("es")}, beginAtZero:true, title:{display:true,text:"Revenue",color:"#5A5A78",font:{size:11}} }
+        }
+      }
+    });
+  }, [validContent.length, validContent.map(c=>c.revenue+c.reach).join()]);
+
+  if (validContent.length < 3) return (
+    <div style={{ background:"#13131C",border:"1px solid #1A1A28",borderRadius:12,padding:"18px 20px" }}>
+      <div style={{ fontWeight:600,fontSize:13,marginBottom:6 }}>ROI por pieza — Reach vs Revenue</div>
+      <EmptyChart icon="🎯" title="Registra al menos 3 piezas" hint="Con reach y revenue completados para ver cuál tipo de contenido tiene mejor retorno"/>
+    </div>
+  );
+  return (
+    <div style={{ background:"#13131C",border:"1px solid #1A1A28",borderRadius:12,padding:"18px 20px" }}>
+      <div style={{ fontWeight:600,fontSize:13 }}>ROI por pieza — Reach vs Revenue</div>
+      <div style={{ fontSize:11,color:"#5A5A78",marginTop:2,marginBottom:14 }}>Arriba a la derecha = mejor rendimiento</div>
+      <div style={{ position:"relative",height:260 }}>
+        <canvas ref={ref} role="img" aria-label="ROI scatter por pieza de contenido"/>
+      </div>
+    </div>
+  );
+}
+
+
 function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUpdateClient }) {
   const angles = (client && client.angles) || [];
   const pains = (client && client.pains) || [];
@@ -1100,6 +1152,7 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
       </div>
 
       <ReachByMonthChart content={displayed}/>
+      <ContentROIChart content={displayed}/>
 
             {/* MONTHLY SUMMARIES (only in general view) */}
       {viewMode==="general"&&allMonths.length>0&&(
