@@ -140,7 +140,7 @@ const Divider = ({ label }) => (
   </div>
 );
 const Modal = ({ title, onClose, width=560, children }) => (
-  <div style={{ position:"absolute",inset:0,background:"#000000DD",zIndex:999,display:"flex",alignItems:"flex-start",justifyContent:"center",padding:"60px 20px 20px" }} onClick={onClose}>
+  <div style={{ position:"fixed",inset:0,background:"#000000DD",zIndex:9999,display:"flex",alignItems:"center",justifyContent:"center",padding:"20px" }} onClick={onClose}>
     <div style={{ background:T.card,border:`1px solid ${T.border}`,borderRadius:16,padding:28,width:"100%",maxWidth:width,maxHeight:"80vh",overflowY:"auto" }} onClick={e=>e.stopPropagation()}>
       <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:20 }}>
         <span className="syne" style={{ fontSize:17,fontWeight:800 }}>{title}</span>
@@ -1068,7 +1068,7 @@ function ContentLab({ clientId, client, content, onAdd, onUpdate, onDelete, onUp
   };
 
   return (
-    <div style={{ display:"flex",flexDirection:"column",gap:20 }}>
+    <div style={{ display:"flex",flexDirection:"column",gap:20,position:"relative" }}>
       <div style={{ display:"flex",justifyContent:"space-between",alignItems:"center" }}>
         <div>
           <div className="syne" style={{ fontSize:20,fontWeight:800 }}>Content Lab</div>
@@ -2233,7 +2233,7 @@ export default function Eclypse() {
   );
 
   return (
-    <div style={{ minHeight:"100vh",background:T.bg,display:"flex",flexDirection:"column",position:"relative" }}>
+    <div style={{ minHeight:"100vh",background:T.bg,display:"flex",flexDirection:"column",position:"relative",isolation:"isolate" }}>
       <style>{css}</style>
 
       {/* HEADER */}
