@@ -27,49 +27,12 @@ const thisMonth = () => new Date().toISOString().slice(0,7);
 const getMonth = (d) => (d||"").slice(0,7);
 
 const SEED = {
-  clients:[
-    { id:"c1", name:"Dani", niche:"Wellness", ig:"@dani_wellness", followers:"28K", startDate:"2026-04-01", revShare:30, onboardingFee:1200, status:"active", avatar:"D", photo:null,
-      angles:["Educación problema","Lista de síntomas","Curiosidad + problema","Prueba social","Objeción directa","Resultado cliente","Contrarian","Rutina / día a día"],
-      pains:["Inflamación crónica","Sistema nervioso","Fatiga crónica","Ansiedad alimentaria","Falta de energía","Sobrepeso","Estrés crónico","Insomnio"],
-      buyReasons:["Resultado transformación","Contenido educativo","Urgencia / dolor fuerte","Prueba social / testimonio","Recomendación","Precio / oferta","Seguimiento persistente"],
-      objections:["Precio","Ahora no es buen momento","Consultar con su pareja","Miedo a no cumplirse","Viaje / evento próximo","Desconfianza por malas experiencias","Quiere acompañamiento presencial","Comparando otros programas","Tengo que pensarlo","Pagaré en X fecha","Sin objeción"],
-      avatars:["Mujer 25-35 estresada","Mujer 35-45 con fatiga crónica","Mujer activa con inflamación","Mujer con ansiedad alimentaria"],
-    },
-  ],
-  content:[
-    { id:"ct1", clientId:"c1", date:"2026-06-09", type:"Reel", topic:"Por qué tienes antojos por la noche", angle:"Curiosidad + problema", pain:"Ansiedad alimentaria", avatar:"Mujer con ansiedad alimentaria", reach:31200, saves:890, shares:445, comments:112, followers_gained:234, leadsGenerated:22, salesLinked:9, revenue:1530, cashCollected:1530 },
-    { id:"ct2", clientId:"c1", date:"2026-06-03", type:"Carrusel", topic:"5 señales de inflamación crónica", angle:"Lista de síntomas", pain:"Inflamación crónica", avatar:"Mujer activa con inflamación", reach:9200, saves:540, shares:201, comments:63, followers_gained:89, leadsGenerated:14, salesLinked:5, revenue:870, cashCollected:870 },
-    { id:"ct3", clientId:"c1", date:"2026-06-06", type:"Historia", topic:"Testimonio cliente", angle:"Prueba social", pain:"Falta de energía", avatar:"Mujer 35-45 con fatiga crónica", reach:4100, saves:0, shares:12, comments:28, followers_gained:22, leadsGenerated:6, salesLinked:3, revenue:510, cashCollected:510 },
-    { id:"ct4", clientId:"c1", date:"2026-06-01", type:"Reel", topic:"Síntomas del sistema nervioso sobreactivado", angle:"Educación problema", pain:"Sistema nervioso", avatar:"Mujer 25-35 estresada", reach:18400, saves:312, shares:89, comments:47, followers_gained:145, leadsGenerated:8, salesLinked:2, revenue:340, cashCollected:340 },
-    { id:"ct5", clientId:"c1", date:"2026-05-15", type:"Carrusel", topic:"Cómo bajar la inflamación sin dieta", angle:"Contrarian", pain:"Inflamación crónica", avatar:"Mujer activa con inflamación", reach:12400, saves:620, shares:180, comments:54, followers_gained:112, leadsGenerated:11, salesLinked:4, revenue:680, cashCollected:680 },
-    { id:"ct6", clientId:"c1", date:"2026-05-08", type:"Reel", topic:"La raíz del cansancio crónico", angle:"Educación problema", pain:"Fatiga crónica", avatar:"Mujer 35-45 con fatiga crónica", reach:22100, saves:710, shares:320, comments:88, followers_gained:198, leadsGenerated:17, salesLinked:7, revenue:1190, cashCollected:1190 },
-  ],
-  leads:[
-    { id:"l1", clientId:"c1", name:"Ana López", source:"Reel Jun 9", stage:"conversación", firstContactDate:"2026-06-09", scheduledDate:"", date:"2026-06-09", showedUp:null, notes:"Interesada en plan 3 meses", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"", avatar:"" },
-    { id:"l2", clientId:"c1", name:"María García", source:"Carrusel Jun 3", stage:"cerrado", firstContactDate:"2026-06-04", scheduledDate:"2026-06-06", date:"2026-06-04", showedUp:true, notes:"Plan básico", saleAmount:97, cashCollected:97, isUpsell:false, isResell:false, paymentType:"Upfront", buyReason:"Resultado transformación", program:"Plan Esencial", callLink:"", objection:"Sin objeción", avatar:"Mujer 25-35 estresada" },
-    { id:"l3", clientId:"c1", name:"Sofia Ruiz", source:"Reel Jun 9", stage:"no-show", firstContactDate:"2026-06-10", scheduledDate:"2026-06-11", date:"2026-06-10", showedUp:false, notes:"", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"Ahora no es buen momento" },
-    { id:"l4", clientId:"c1", name:"Carla Vega", source:"Historia Jun 6", stage:"cerrado", firstContactDate:"2026-06-07", scheduledDate:"2026-06-09", date:"2026-06-07", showedUp:true, notes:"Plan premium", saleAmount:197, cashCollected:197, isUpsell:false, isResell:false, paymentType:"2 cuotas", buyReason:"Contenido educativo", program:"Plan Premium 3M", callLink:"", objection:"Sin objeción", avatar:"Mujer activa con inflamación" },
-    { id:"l5", clientId:"c1", name:"Luisa Mora", source:"Carrusel Jun 3", stage:"llamada agendada", firstContactDate:"2026-06-11", scheduledDate:"2026-06-13", date:"2026-06-11", showedUp:true, notes:"Call mañana", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"Plan Esencial", callLink:"https://cal.com/dani/consulta", objection:"" },
-    { id:"l6", clientId:"c1", name:"Patricia Díaz", source:"Reel Jun 1", stage:"cerrado", firstContactDate:"2026-06-03", scheduledDate:"2026-06-05", date:"2026-06-03", showedUp:true, notes:"Upsell 6 meses", saleAmount:347, cashCollected:347, isUpsell:true, isResell:false, paymentType:"3 cuotas", buyReason:"Urgencia / dolor fuerte", program:"Plan Transformación 6M", callLink:"", objection:"Sin objeción", avatar:"Mujer 35-45 con fatiga crónica" },
-    { id:"l7", clientId:"c1", name:"Fernanda Ríos", source:"Reel Jun 9", stage:"nuevo lead", firstContactDate:"2026-06-10", scheduledDate:"", date:"2026-06-10", showedUp:null, notes:"", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"" },
-    { id:"l8", clientId:"c1", name:"Valentina Cruz", source:"Carrusel Jun 3", stage:"no-show", firstContactDate:"2026-06-05", scheduledDate:"2026-06-07", date:"2026-06-05", showedUp:false, notes:"", saleAmount:0, cashCollected:0, isUpsell:false, isResell:false, paymentType:"", buyReason:"", program:"", callLink:"", objection:"Precio" },
-  ],
-  dailyChats:[
-    { id:"dc1", clientId:"c1", date:"2026-06-09", uniqueChats:8, conversations:5, scheduled:2 },
-    { id:"dc2", clientId:"c1", date:"2026-06-10", uniqueChats:6, conversations:4, scheduled:1 },
-    { id:"dc3", clientId:"c1", date:"2026-06-11", uniqueChats:5, conversations:3, scheduled:2 },
-  ],
-  products:[
-    { id:"p1", clientId:"c1", name:"Plan Esencial", price:97, type:"one-time", sales:8, active:true },
-    { id:"p2", clientId:"c1", name:"Plan Premium 3M", price:197, type:"one-time", sales:4, active:true },
-    { id:"p3", clientId:"c1", name:"Plan Transformación 6M", price:347, type:"one-time", sales:2, active:true },
-    { id:"p4", clientId:"c1", name:"Membresía Mensual", price:37, type:"recurring", sales:11, active:true },
-  ],
-  billing:[
-    { id:"b1", clientId:"c1", month:"2026-04", totalRevenue:1820, cashCollected:1820, revShare:30, revShareEarned:546, revShareCollected:true, notes:"" },
-    { id:"b2", clientId:"c1", month:"2026-05", totalRevenue:2640, cashCollected:2640, revShare:30, revShareEarned:792, revShareCollected:true, notes:"" },
-    { id:"b3", clientId:"c1", month:"2026-06", totalRevenue:3250, cashCollected:1820, revShare:30, revShareEarned:975, revShareCollected:false, notes:"" },
-  ],
+  clients: [],
+  content: [],
+  leads: [],
+  dailyChats: [],
+  products: [],
+  billing: [],
 };
 
 const LEAD_STAGES = [
