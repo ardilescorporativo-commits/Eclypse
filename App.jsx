@@ -2186,12 +2186,12 @@ export default function Eclypse() {
       try {
         const d = await S.get("eclypse-v1");
         if(d){
-          if(d.clients?.length) setClients(d.clients);
-          if(d.content?.length) setContent(d.content);
-          if(d.leads?.length) setLeads(d.leads);
-          if(d.dailyChats?.length) setDailyChats(d.dailyChats);
-          if(d.products?.length) setProducts(d.products);
-          if(d.billing?.length) setBilling(d.billing);
+          if(Array.isArray(d.clients)) setClients(d.clients);
+if(Array.isArray(d.content)) setContent(d.content);
+if(Array.isArray(d.leads)) setLeads(d.leads);
+if(Array.isArray(d.dailyChats)) setDailyChats(d.dailyChats);
+if(Array.isArray(d.products)) setProducts(d.products);
+if(Array.isArray(d.billing)) setBilling(d.billing);
           
           if(d.selectedClient) setSelectedClient(d.selectedClient);
         }
