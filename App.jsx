@@ -2143,7 +2143,7 @@ export default function Eclypse() {
   const [billing, setBilling] = useState(SEED.billing);
   // angles/pains/buyReasons/programs/objections now live on each client object
   const [loaded, setLoaded] = useState(false);
-
+const [sidebarOpen, setSidebarOpen] = useState(true);
   useEffect(()=>{
     (async()=>{
       try {
@@ -2199,20 +2199,26 @@ if(Array.isArray(d.billing)) setBilling(d.billing);
     <div style={{ minHeight:"100vh",background:T.bg,display:"flex",flexDirection:"row",position:"relative",isolation:"isolate" }}>
       <style>{css}</style>
 
-      {/* SIDEBAR */}
-      <div style={{ width:200,background:T.surface,borderRight:`1px solid ${T.border}`,display:"flex",flexDirection:"column",position:"sticky",top:0,height:"100vh",flexShrink:0,zIndex:100 }}>
-        <div style={{ padding:"20px 16px",borderBottom:`1px solid ${T.border}`,display:"flex",alignItems:"center",gap:8 }}>
-          <EclypseIcon size={22}/>
-          <span className="syne" style={{ fontSize:14,fontWeight:800,letterSpacing:"0.06em",color:T.text }}>ECLYPSE</span>
-        </div>
-        <nav style={{ flex:1,padding:"12px 8px",display:"flex",flexDirection:"column",gap:2 }}>
-          {NAV.map(n=>(
-            <button key={n.id} onClick={()=>setView(n.id)} style={{ display:"flex",alignItems:"center",gap:10,padding:"10px 12px",borderRadius:8,background:view===n.id?T.goldSoft:"transparent",border:view===n.id?`1px solid ${T.gold}40`:"1px solid transparent",color:view===n.id?T.gold:T.muted,fontSize:13,fontWeight:view===n.id?600:400,cursor:"pointer",width:"100%",textAlign:"left" }}>
-              <span style={{ fontSize:14 }}>{n.icon}</span>{n.label}
-            </button>
-          ))}
-        </nav>
-      </div>
+     {/* SIDEBAR */}
+<div style={{ width:sidebarOpen?200:56, background:T.surface, borderRight:`1px solid ${T.border}`, display:"flex", flexDirection:"column", position:"sticky", top:0, height:"100vh", flexShrink:0, zIndex:100, transition:"width 0.2s ease" }}>
+  <div style={{ padding:"16px 12px", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", justifyContent:"space-between", gap:8 }}>
+    {sidebarOpen && <div style={{ display:"flex", alignItems:"center", gap:8 }}>
+      <EclypseIcon size={22}/>
+      <span className="syne" style={{ fontSize:14, fontWeight:800, letterSpacing:"0.06em", color:T.text }}>ECLYPSE</span>
+    </div>}
+    <button onClick={()=>setSidebarOpen(p=>!p)} style={{ background:T.dim, border:"none", color:T.muted, borderRadius:6, width:28, height:28, cursor:"pointer", fontSize:14, display:"flex", alignItems:"center", justifyContent:"center", flexShrink:0 }}>
+      {sidebarOpen ? "←" : "→"}
+    </button>
+  </div>
+  <nav style={{ flex:1, padding:"12px 8px", display:"flex", flexDirection:"column", gap:2 }}>
+    {NAV.map(n=>(
+      <button key={n.id} onClick={()=>setView(n.id)} title={n.label} style={{ display:"flex", alignItems:"center", gap:10, padding:"10px 12px", borderRadius:8, background:view===n.id?T.goldSoft:"transparent", border:view===n.id?`1px solid ${T.gold}40`:"1px solid transparent", color:view===n.id?T.gold:T.muted, fontSize:13, fontWeight:view===n.id?600:400, cursor:"pointer", width:"100%", textAlign:"left", overflow:"hidden", whiteSpace:"nowrap" }}>
+        <span style={{ fontSize:16, flexShrink:0 }}>{n.icon}</span>
+        {sidebarOpen && n.label}
+      </button>
+    ))}
+  </nav>
+</div>
 
       {/* BODY */}
       <div style={{ flex:1,padding:"22px 24px",overflowY:"auto",height:"100vh" }}>
