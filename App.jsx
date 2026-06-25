@@ -2196,27 +2196,30 @@ if(Array.isArray(d.billing)) setBilling(d.billing);
   );
 
   return (
-    <div style={{ minHeight:"100vh",background:T.bg,display:"flex",flexDirection:"column",position:"relative",isolation:"isolate" }}>
+    <div style={{ minHeight:"100vh",background:T.bg,display:"flex",flexDirection:"row",position:"relative",isolation:"isolate" }}>
       <style>{css}</style>
 
       {/* HEADER */}
-      <div style={{ background:T.surface, borderBottom:`1px solid ${T.border}`,padding:"0 24px", display:"flex",alignItems:"center",gap:24,height:50,position:"sticky",top:0,zIndex:100 }}>
-        <div style={{ display:"flex",alignItems:"center",gap:8 }}>
-          <EclypseIcon size={20}/>
-          <span className="syne" style={{ fontSize:13,fontWeight:800,letterSpacing:"0.06em",color:T.text }}>ECLYPSE</span>
-        </div>
-        <div style={{ flex:1, display:"flex",gap:2 }}>
-          {NAV.map(n=>(
-            <button key={n.id} onClick={()=>setView(n.id)} style={{ display:"flex",alignItems:"center",gap:6,padding:"5px 13px",borderRadius:7,background:view===n.id?T.goldSoft:"transparent",border:view===n.id?`1px solid ${T.gold}40`:"1px solid transparent",color:view===n.id?T.gold:T.muted,fontSize:12,fontWeight:view===n.id?600:400,cursor:"pointer" }}>
-              <span style={{ fontSize:12 }}>{n.icon}</span>{n.label}
-            </button>
-          ))}
-        </div>
-      </div>
+      <div style={{ minHeight:"100vh", background:T.bg, display:"flex", flexDirection:"row", position:"relative", isolation:"isolate" }}>
+  <style>{css}</style>
 
-      {/* BODY */}
-      <div style={{ flex:1,padding:"22px 24px",overflowY:"auto" }}>
-        <ClientBar
+  {/* SIDEBAR */}
+  <div style={{ width:200, background:T.surface, borderRight:`1px solid ${T.border}`, display:"flex", flexDirection:"column", position:"sticky", top:0, height:"100vh", flexShrink:0, zIndex:100 }}>
+    <div style={{ padding:"20px 16px", borderBottom:`1px solid ${T.border}`, display:"flex", alignItems:"center", gap:8 }}>
+      <EclypseIcon size={22}/>
+      <span className="syne" style={{ fontSize:14, fontWeight:800, letterSpacing:"0.06em", color:T.text }}>ECLYPSE</span>
+    </div>
+    <nav style={{ flex:1, padding:"12px 8px", display:"flex", flexDirection:"column", gap:2 }}>
+      {NAV.map(n=>(
+        <button key={n.id} onClick={()=>setView(n.id)} style={{ display:"flex", alignItems:"center", gap:10, padding:"10px 12px", borderRadius:8, background:view===n.id?T.goldSoft:"transparent", border:view===n.id?`1px solid ${T.gold}40`:"1px solid transparent", color:view===n.id?T.gold:T.muted, fontSize:13, fontWeight:view===n.id?600:400, cursor:"pointer", width:"100%", textAlign:"left" }}>
+          <span style={{ fontSize:14 }}>{n.icon}</span>{n.label}
+        </button>
+      ))}
+    </nav>
+  </div>
+
+  {/* BODY */}
+  <div style={{ flex:1, padding:"22px 24px", overflowY:"auto", height:"100vh" }}>
           clients={clients} selected={selectedClient}
           onSelect={(id)=>{ setSelectedClient(id); setShowAll(false); persist({selectedClient:id}); }}
           onAdd={(c)=>{ const list=[...clients,c]; upClients(list); setSelectedClient(c.id); setShowAll(false); }}
